@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TableHarvest - export any web table to Excel, CSV or Google Sheets</title>
+<meta name="description" content="TableHarvest is a Chrome extension that copies or downloads any table on a web page to Excel, CSV or Google Sheets in one click. Handles merged cells and paginated tables. 100% local.">
+<link rel="icon" href="../assets/icon-128.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="../"><img src="../assets/icon-128.png" alt=""> HeroBytes</a>
+  <nav><a href="#features">Features</a><a href="#pro">Pro</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>TableHarvest</h1>
+    <p class="lead">Export any table on a web page to Excel, CSV or Google Sheets in one click. Merged cells, data grids and paginated tables included. Nothing is uploaded anywhere: the file is built inside your browser.</p>
+    <a class="btn primary" id="install" href="#install-note">Add to Chrome</a>
+    <a class="btn secondary" href="#pro">See Pro</a>
+    <p class="small" id="install-note">TableHarvest is being published on the Chrome Web Store. This button will link to the store listing as soon as it is live.</p>
+  </div>
+
+  <section id="features">
+    <h2>What it does, free and unlimited</h2>
+    <ul>
+      <li>Finds every table on the page: regular HTML tables, div-based data grids (ARIA grids), CSS tables and tables inside frames.</li>
+      <li>An "Export" badge on each table, or right-click &gt; "Export this table".</li>
+      <li>Preview before exporting, with the exact rows and columns you will get.</li>
+      <li>Copy for Excel / Google Sheets: paste with Ctrl+V and it lands as a grid with real numbers, in any spreadsheet language.</li>
+      <li>Download CSV with the separator your Excel expects (comma, or semicolon for Spanish, Portuguese, German and French Excel) and the encoding you need.</li>
+      <li>Merged cells (rowspan / colspan) are laid out correctly. Line breaks inside cells are kept.</li>
+      <li>Header rows detected automatically; you can override them. Optional: only visible rows, include link URLs.</li>
+      <li>Form fields inside tables (inputs, checkboxes, dropdowns) export their current value.</li>
+    </ul>
+  </section>
+
+  <section id="shots">
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure><img src="../assets/tableharvest/screenshot-1-preview.png" alt="Preview of a table before exporting"><figcaption>Preview with header detection, separator and encoding options.</figcaption></figure>
+      <figure><img src="../assets/tableharvest/screenshot-3-wikipedia.png" alt="A Wikipedia table with 239 rows ready to export"><figcaption>Large tables: the export includes everything.</figcaption></figure>
+      <figure><img src="../assets/tableharvest/screenshot-2-badges.png" alt="Export badges on each table of a page"><figcaption>One badge per table, or use the right-click menu.</figcaption></figure>
+      <figure><img src="../assets/tableharvest/screenshot-4-multipage.png" alt="Multi-page capture collecting rows from several pages"><figcaption>Pro: multi-page capture for paginated tables.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="pro">
+    <h2>TableHarvest Pro</h2>
+    <p>One license key for all your computers. Works offline. <strong>USD 14.99 per year.</strong></p>
+    <table class="cmp">
+      <tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
+      <tr><td>Copy to Excel / Sheets, download CSV</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Merged cells, data grids, frames, header detection</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Download as Excel (.xlsx) with frozen header and filters</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Export all tables on a page at once (one sheet per table)</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Multi-page capture: paginated tables into one export</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Export to Google Sheets</td><td>-</td><td>Yes</td></tr>
+    </table>
+    <p>Buy from the extension: open Settings &gt; TableHarvest Pro &gt; Get Pro. Payment and invoicing are handled by Lemon Squeezy, our merchant of record. The key arrives by email; paste it in Settings to activate.</p>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>Questions</h2>
+    <h3>Does it send my data anywhere?</h3>
+    <p>No. Tables are read and converted inside your browser. The only network requests are the license check when you activate Pro and, if you choose to connect it, Google Sheets. See the <a href="privacy.html">privacy policy</a>.</p>
+    <h3>My Excel is in Spanish / Portuguese / German. Will numbers work?</h3>
+    <p>Yes. Each number is copied with its real value, so "1,425,423,212" is a number in any spreadsheet language, and you can pick the CSV separator your Excel expects.</p>
+    <h3>A table does not export the way I expect.</h3>
+    <p>Write to support with the page address. Tables that do not export are fixed in the next version.</p>
+    <h3>Can I use one key on several computers?</h3>
+    <p>Yes, up to three activations per key. Deactivate a computer from Settings to free a slot.</p>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p><a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a></p>
+  </section>
+</main>
+
+<footer><div class="wrap">TableHarvest by HeroBytes &middot; <a href="privacy.html">Privacy policy</a> &middot; <a href="../">HeroBytes</a></div></footer>
+</body>
+</html>
