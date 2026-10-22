@@ -38,7 +38,7 @@
       </div>
       <div class="frame">
         <div class="bar"><i></i><i></i><i></i><span class="url">en.wikipedia.org/wiki/List_of_countries_by_population</span></div>
-        <img src="assets/tableharvest/screenshot-3-wikipedia.png" alt="TableHarvest previewing a Wikipedia table before exporting it to Excel" width="1280" height="800">
+        <img class="zoomable" src="assets/tableharvest/wikipedia-panel.png" data-full="assets/tableharvest/screenshot-3-wikipedia.png" alt="TableHarvest previewing a Wikipedia table before exporting it to Excel" width="1124" height="760">
       </div>
     </div>
   </div>
@@ -91,5 +91,12 @@
   <span>&copy; 2026 HeroBytes &middot; Colombia</span>
   <span><a href="tableharvest/">TableHarvest</a> &middot; <a href="tableharvest/privacy.html">Privacy policy</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
 </div></footer>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><p>Click the image or press Esc to close</p></dialog>
+<script>
+(function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
+d.addEventListener('click',function(){d.close();});})();
+</script>
 </body>
 </html>

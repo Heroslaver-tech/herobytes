@@ -39,7 +39,7 @@
       </div>
       <div class="frame">
         <div class="bar"><i></i><i></i><i></i><span class="url">Sales by region (USD) &middot; preview before export</span></div>
-        <img src="../assets/tableharvest/screenshot-1-preview.png" alt="TableHarvest preview panel with export options" width="1280" height="800">
+        <img class="zoomable" src="../assets/tableharvest/preview-panel.png" data-full="../assets/tableharvest/screenshot-1-preview.png" alt="TableHarvest preview panel with export options" width="1124" height="500">
       </div>
     </div>
   </div>
@@ -57,11 +57,11 @@
   </div></section>
 
   <section id="shots"><div class="wrap">
-    <div class="section-head"><h2>See it on real pages</h2><p>Wikipedia, admin panels, bank statements, data grids: if it looks like a table, it exports.</p></div>
+    <div class="section-head"><h2>See it on real pages</h2><p>Wikipedia, admin panels, bank statements, data grids: if it looks like a table, it exports. Click any screenshot to enlarge it.</p></div>
     <div class="gallery">
-      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">en.wikipedia.org</span></div><img src="../assets/tableharvest/screenshot-3-wikipedia.png" alt="A Wikipedia table with 239 rows ready to export" loading="lazy"></div><figcaption>Large tables: the export includes everything, not only the preview.</figcaption></figure>
-      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Export badges</span></div><img src="../assets/tableharvest/screenshot-2-badges.png" alt="Export badges on each table of a page" loading="lazy"></div><figcaption>One badge per table, or right-click any table.</figcaption></figure>
-      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Multi-page capture (Pro)</span></div><img src="../assets/tableharvest/screenshot-4-multipage.png" alt="Multi-page capture collecting rows from several pages" loading="lazy"></div><figcaption>Paginated tables collected into a single export.</figcaption></figure>
+      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">en.wikipedia.org</span></div><img class="zoomable" src="../assets/tableharvest/wikipedia-panel.png" data-full="../assets/tableharvest/screenshot-3-wikipedia.png" alt="A Wikipedia table with 239 rows ready to export" width="1124" height="760" loading="lazy"></div><figcaption>Large tables: the export includes everything, not only the preview.</figcaption></figure>
+      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Export badges</span></div><img class="zoomable" src="../assets/tableharvest/screenshot-2-badges.png" alt="Export badges on each table of a page" width="1280" height="800" loading="lazy"></div><figcaption>One badge per table, or right-click any table.</figcaption></figure>
+      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Multi-page capture (Pro)</span></div><img class="zoomable" src="../assets/tableharvest/screenshot-4-multipage.png" alt="Multi-page capture collecting rows from several pages" width="1280" height="800" loading="lazy"></div><figcaption>Paginated tables collected into a single export.</figcaption></figure>
     </div>
   </div></section>
 
@@ -122,5 +122,12 @@
   <span>TableHarvest by HeroBytes &middot; &copy; 2026</span>
   <span><a href="privacy.html">Privacy policy</a> &middot; <a href="../">HeroBytes</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
 </div></footer>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><p>Click the image or press Esc to close</p></dialog>
+<script>
+(function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
+d.addEventListener('click',function(){d.close();});})();
+</script>
 </body>
 </html>
