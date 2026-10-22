@@ -5,59 +5,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HeroBytes - small tools that save hours</title>
 <meta name="description" content="HeroBytes builds small, focused productivity software: Chrome extensions and WordPress plugins. TableHarvest exports any web table to Excel, CSV or Google Sheets.">
-<link rel="icon" href="assets/icon-128.png">
+<meta property="og:title" content="HeroBytes - small tools that save hours">
+<meta property="og:description" content="Chrome extensions and WordPress plugins that do one job well, work in any language and keep your data on your computer.">
+<meta property="og:image" content="https://heroslaver-tech.github.io/herobytes/assets/tableharvest/screenshot-1-preview.png">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="logo" href="./"><img src="assets/icon-128.png" alt=""> HeroBytes</a>
-  <nav><a href="tableharvest/">TableHarvest</a><a href="#wordpress">WordPress plugins</a><a href="#contact">Contact</a></nav>
+  <a class="logo" href="./"><img src="assets/logo.svg" alt=""> HeroBytes</a>
+  <nav class="nav"><a href="#products">Products</a><a href="#how">How we work</a><a href="#contact">Contact</a><a class="cta" href="tableharvest/">TableHarvest</a></nav>
 </div></header>
 
-<main class="wrap">
-  <div class="hero">
-    <h1>Small tools that save hours.</h1>
-    <p class="lead">HeroBytes builds focused productivity software: browser extensions for Google Chrome and plugins for WordPress. Each one does one job well, works in any language, and keeps your data on your computer.</p>
-    <a class="btn primary" href="tableharvest/">See TableHarvest</a>
-  </div>
-
-  <section id="products">
-    <h2>Products</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>TableHarvest <span class="tag">Chrome extension</span></h3>
-        <p>Export any table on a web page to Excel, CSV or Google Sheets in one click. Merged cells, paginated tables and data grids included. Free, with a Pro upgrade.</p>
-        <a href="tableharvest/">Learn more</a>
+<main>
+  <div class="wrap hero">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Chrome extensions &amp; WordPress plugins</span>
+        <h1>Small tools that save hours.</h1>
+        <p class="lead">Each HeroBytes product does one job well, works in any language, and keeps your data on your computer. No accounts, no tracking, no surprises.</p>
+        <div class="actions">
+          <a class="btn primary" href="tableharvest/">Meet TableHarvest</a>
+          <a class="btn secondary" href="#products">All products</a>
+        </div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Runs on your computer</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Free versions stay free</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Support by a real person</span>
+        </div>
       </div>
-      <div class="card" id="wordpress">
-        <h3>HeroBytes Hide Title &amp; Meta <span class="tag">WordPress</span></h3>
-        <p>Hide the title, featured image, author, date, categories or comments on any individual post or page. Block themes and classic themes. Never touches menus.</p>
-        <span class="small">In review at the WordPress.org plugin directory.</span>
-      </div>
-      <div class="card">
-        <h3>HeroBytes Confirm &amp; Masks for Contact Form 7 <span class="tag">WordPress</span></h3>
-        <p>A confirmation screen before sending, input masks for phones, documents and amounts, and simple multi-step forms for Contact Form 7.</p>
-        <span class="small">Coming to the WordPress.org plugin directory.</span>
-      </div>
-      <div class="card">
-        <h3>HeroBytes Checkout Fields for Brazil &amp; Colombia <span class="tag">WordPress</span></h3>
-        <p>CPF/CNPJ, number, neighborhood and CEP lookup for Brazil; document type, department and DIVIPOLA city lists for Colombia. Classic and block checkout.</p>
-        <span class="small">Coming to the WordPress.org plugin directory.</span>
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i><span class="url">en.wikipedia.org/wiki/List_of_countries_by_population</span></div>
+        <img src="assets/tableharvest/screenshot-3-wikipedia.png" alt="TableHarvest previewing a Wikipedia table before exporting it to Excel" width="1280" height="800">
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="how">
-    <h2>How we work</h2>
-    <p>Free versions are complete and stay free. Paid versions add features that professionals need, sold as a yearly license through our payment partner Lemon Squeezy. No accounts, no analytics, no data collection: our software runs on your computer and nothing is sent to us.</p>
-  </section>
+  <section id="products"><div class="wrap">
+    <div class="section-head"><h2>Products</h2><p>One extension for Chrome and three plugins for WordPress, with more on the way.</p></div>
+    <div class="products">
+      <a class="product" href="tableharvest/" style="text-decoration:none">
+        <span class="kind">Chrome extension</span>
+        <h3>TableHarvest</h3>
+        <p>Export any table on a web page to Excel, CSV or Google Sheets in one click. Merged cells, data grids and paginated tables included. Free, with a Pro upgrade.</p>
+        <span class="status live">Publishing on the Chrome Web Store</span>
+      </a>
+      <div class="product">
+        <span class="kind">WordPress plugin</span>
+        <h3>HeroBytes Hide Title &amp; Meta</h3>
+        <p>Hide the title, featured image, author, date, categories or comments on any individual post or page. Block themes and classic themes. Never touches menus.</p>
+        <span class="status soon">In review at WordPress.org</span>
+      </div>
+      <div class="product">
+        <span class="kind">WordPress plugin</span>
+        <h3>HeroBytes Confirm &amp; Masks for Contact Form 7</h3>
+        <p>A confirmation screen before sending, input masks for phones, documents and amounts, and simple multi-step forms.</p>
+        <span class="status soon">Coming to WordPress.org</span>
+      </div>
+      <div class="product">
+        <span class="kind">WordPress plugin</span>
+        <h3>HeroBytes Checkout Fields for Brazil &amp; Colombia</h3>
+        <p>CPF/CNPJ, number, neighborhood and CEP lookup for Brazil; document type, department and DIVIPOLA city lists for Colombia. Classic and block checkout.</p>
+        <span class="status soon">Coming to WordPress.org</span>
+      </div>
+    </div>
+  </div></section>
 
-  <section id="contact">
-    <h2>Contact and support</h2>
-    <p>Write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a>. We answer every message, usually within one business day.</p>
-  </section>
+  <section id="how"><div class="wrap">
+    <div class="section-head"><h2>How we work</h2><p>Three rules we do not break.</p></div>
+    <div class="features">
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Your data stays yours</h3><p>Our software runs inside your browser or your site. Nothing is sent to us: we have no servers to send it to.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Free means complete</h3><p>Free versions are not demos. Pro versions add what professionals need and are sold as a yearly license through Lemon Squeezy.</p></div>
+      <div class="feature"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><h3>Works in any language</h3><p>Tested with Excel, Google Sheets and WordPress in English, Spanish and Portuguese, not just in the language of the developer.</p></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="section-head"><h2>Contact and support</h2><p>Write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a>. Every message gets an answer, usually within one business day.</p></div>
+  </div></section>
 </main>
 
-<footer><div class="wrap">HeroBytes &middot; <a href="tableharvest/privacy.html">Privacy policy</a> &middot; Colombia</div></footer>
+<footer><div class="wrap">
+  <span>&copy; 2026 HeroBytes &middot; Colombia</span>
+  <span><a href="tableharvest/">TableHarvest</a> &middot; <a href="tableharvest/privacy.html">Privacy policy</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
+</div></footer>
 </body>
 </html>
