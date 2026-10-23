@@ -133,15 +133,19 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--m
 footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: center; }
 footer a { color: var(--muted); }
 
-/* Screenshot accordion */
-.acc details { border: 1px solid var(--line); border-radius: 14px; background: var(--card); margin-bottom: 12px; overflow: hidden; }
-.acc summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 16px 20px; align-items: center; }
-.acc summary::-webkit-details-marker { display: none; }
-.acc summary .t { font-weight: 700; font-size: 17px; }
-.acc summary .d { grid-column: 1; color: var(--muted); font-size: 14px; }
-.acc summary::after { content: "+"; grid-column: 2; grid-row: 1 / span 2; font-size: 24px; color: var(--muted); width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; }
-.acc details[open] summary::after { content: "2"; }
-.acc details[open] summary { border-bottom: 1px solid var(--line); }
-.acc .body { padding: 18px 20px 20px; background: var(--bg-2); }
-.acc .frame { max-width: 960px; margin: 0 auto; }
-.tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; vertical-align: middle; margin-left: 6px; }
+/* Screenshot carousel */
+.carousel { position: relative; }
+.carousel .track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 4px 4px 8px; scrollbar-width: none; outline: none; }
+.carousel .track::-webkit-scrollbar { display: none; }
+.carousel .slide { flex: 0 0 min(100%, 880px); scroll-snap-align: start; margin: 0; }
+@media (max-width: 920px) { .carousel .slide { flex-basis: 92%; } }
+.carousel figcaption { font-size: 15px; color: var(--muted); margin-top: 12px; }
+.carousel figcaption b { color: var(--fg); font-weight: 600; }
+.carousel .arrow { position: absolute; top: 40%; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--fg); font-size: 28px; line-height: 1; cursor: pointer; box-shadow: var(--shadow); display: grid; place-items: center; padding: 0 0 4px; }
+.carousel .arrow:hover { border-color: var(--brand); color: var(--brand); }
+.carousel .prev { left: -14px; } .carousel .next { right: -14px; }
+@media (max-width: 920px) { .carousel .prev { left: 6px; } .carousel .next { right: 6px; } }
+.carousel .dots { display: flex; justify-content: center; gap: 8px; margin-top: 10px; }
+.carousel .dots button { width: 10px; height: 10px; border-radius: 50%; border: 0; background: var(--line); cursor: pointer; padding: 0; }
+.carousel .dots button.on { background: var(--brand); transform: scale(1.25); }
+.tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; vertical-align: middle; margin-left: 4px; }
