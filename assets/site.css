@@ -132,3 +132,16 @@ dialog.lightbox p { color: #e5e7eb; text-align: center; font-size: 14px; margin:
 footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: center; }
 footer a { color: var(--muted); }
+
+/* Screenshot accordion */
+.acc details { border: 1px solid var(--line); border-radius: 14px; background: var(--card); margin-bottom: 12px; overflow: hidden; }
+.acc summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 16px 20px; align-items: center; }
+.acc summary::-webkit-details-marker { display: none; }
+.acc summary .t { font-weight: 700; font-size: 17px; }
+.acc summary .d { grid-column: 1; color: var(--muted); font-size: 14px; }
+.acc summary::after { content: "+"; grid-column: 2; grid-row: 1 / span 2; font-size: 24px; color: var(--muted); width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; }
+.acc details[open] summary::after { content: "2"; }
+.acc details[open] summary { border-bottom: 1px solid var(--line); }
+.acc .body { padding: 18px 20px 20px; background: var(--bg-2); }
+.acc .frame { max-width: 960px; margin: 0 auto; }
+.tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; vertical-align: middle; margin-left: 6px; }

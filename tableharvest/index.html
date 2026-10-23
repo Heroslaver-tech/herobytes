@@ -57,11 +57,20 @@
   </div></section>
 
   <section id="shots"><div class="wrap">
-    <div class="section-head"><h2>See it on real pages</h2><p>Wikipedia, admin panels, bank statements, data grids: if it looks like a table, it exports. Click any screenshot to enlarge it.</p></div>
-    <div class="gallery">
-      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">en.wikipedia.org</span></div><img class="zoomable" src="../assets/tableharvest/wikipedia-panel.png" data-full="../assets/tableharvest/screenshot-3-wikipedia.png" alt="A Wikipedia table with 239 rows ready to export" width="1124" height="760" loading="lazy"></div><figcaption>Large tables: the export includes everything, not only the preview.</figcaption></figure>
-      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Export badges</span></div><img class="zoomable" src="../assets/tableharvest/screenshot-2-badges.png" alt="Export badges on each table of a page" width="1280" height="800" loading="lazy"></div><figcaption>One badge per table, or right-click any table.</figcaption></figure>
-      <figure><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Multi-page capture (Pro)</span></div><img class="zoomable" src="../assets/tableharvest/screenshot-4-multipage.png" alt="Multi-page capture collecting rows from several pages" width="1280" height="800" loading="lazy"></div><figcaption>Paginated tables collected into a single export.</figcaption></figure>
+    <div class="section-head"><h2>See it on real pages</h2><p>Wikipedia, admin panels, bank statements, data grids: if it looks like a table, it exports. Open a step and click the screenshot to enlarge it.</p></div>
+    <div class="acc">
+      <details name="shots" open>
+        <summary><span class="t">Large tables, complete</span><span class="d">Wikipedia, 239 rows: the export includes everything, not only the preview.</span></summary>
+        <div class="body"><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">en.wikipedia.org</span></div><img class="zoomable" src="../assets/tableharvest/wikipedia-panel.png" data-full="../assets/tableharvest/screenshot-3-wikipedia.png" alt="A Wikipedia table with 239 rows ready to export" width="1124" height="760" loading="lazy"></div></div>
+      </details>
+      <details name="shots">
+        <summary><span class="t">One badge per table</span><span class="d">Every table on the page gets an "Export" badge, or right-click any table.</span></summary>
+        <div class="body"><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Export badges</span></div><img class="zoomable" src="../assets/tableharvest/screenshot-2-badges.png" alt="Export badges on each table of a page" width="1280" height="800" loading="lazy"></div></div>
+      </details>
+      <details name="shots">
+        <summary><span class="t">Multi-page capture <span class="tag">Pro</span></span><span class="d">Paginated tables (page 1, 2, 3...) collected into a single export.</span></summary>
+        <div class="body"><div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">datatables.net</span></div><img class="zoomable" src="../assets/tableharvest/screenshot-4-multipage.png" alt="Multi-page capture collecting rows from several pages" width="1280" height="800" loading="lazy"></div></div>
+      </details>
     </div>
   </div></section>
 
@@ -127,7 +136,8 @@
 <script>
 (function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
 document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
-d.addEventListener('click',function(){d.close();});})();
+d.addEventListener('click',function(){d.close();});
+var acc=document.querySelectorAll('.acc details');acc.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)acc.forEach(function(y){if(y!==x)y.open=false;});});});})();
 </script>
 </body>
 </html>
