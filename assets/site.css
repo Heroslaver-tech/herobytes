@@ -149,3 +149,6 @@ footer a { color: var(--muted); }
 .carousel .dots button { width: 10px; height: 10px; border-radius: 50%; border: 0; background: var(--line); cursor: pointer; padding: 0; }
 .carousel .dots button.on { background: var(--brand); transform: scale(1.25); }
 .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; vertical-align: middle; margin-left: 4px; }
+.steps { max-width: 720px; margin: 0; padding-left: 0; list-style: none; counter-reset: step; display: grid; gap: 12px; }
+.steps li { position: relative; padding: 14px 16px 14px 56px; border: 1px solid var(--line); border-radius: 12px; background: #fff; line-height: 1.5; }
+.steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 16px; top: 12px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--brand), var(--brand-2)); }
