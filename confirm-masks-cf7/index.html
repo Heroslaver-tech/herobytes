@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirmation screen, input masks and multi-step forms for Contact Form 7 - HeroBytes</title>
+<meta name="description" content="Add a 'check your message before sending' screen, phone and document masks, and simple multi-step forms to Contact Form 7. One small free plugin, no jQuery.">
+<meta property="og:title" content="Confirmation screen and input masks for Contact Form 7">
+<meta property="og:description" content="A summary screen before sending, masks for phones, IDs, dates and money, and multi-step forms. Free, no jQuery.">
+<meta property="og:image" content="https://heroslaver-tech.github.io/herobytes/assets/confirm-masks-cf7/screenshot-1.png">
+<link rel="canonical" href="https://heroslaver-tech.github.io/herobytes/confirm-masks-cf7/">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="../"><img src="../assets/logo.svg" alt=""> HeroBytes</a>
+  <nav class="nav"><a href="#confirm">Confirmation</a><a href="#masks">Masks</a><a href="#steps">Multi-step</a><a href="#faq">FAQ</a><a class="cta" href="#get">Get the plugin</a></nav>
+</div></header>
+
+<main>
+  <div class="wrap hero" id="get">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">WordPress plugin &middot; Free &middot; Add-on for Contact Form 7</span>
+        <h1>"Check your message before sending", for Contact Form 7.</h1>
+        <p class="lead">HeroBytes Confirm &amp; Masks adds the three things people keep asking Contact Form 7 for: a confirmation screen with a summary of everything typed, input masks for phones, documents, dates and money, and simple multi-step forms. No jQuery, no tracking.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wordpress.org/plugins/search/herobytes/" rel="noopener">Find it on WordPress.org</a>
+          <a class="btn secondary" href="#confirm">See how it works</a>
+        </div>
+        <p class="note">Submitted to the WordPress.org plugin directory on 27 October 2026 and waiting for review. Until it is listed, write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a> and you will get the zip.</p>
+      </div>
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i><span class="url">Contact Form 7 &middot; confirmation screen in place of the form</span></div>
+        <img class="zoomable" src="../assets/confirm-masks-cf7/screenshot-1.png" alt="A Contact Form 7 form replaced by a summary of the typed values with Back and Send buttons" width="1280" height="800">
+      </div>
+    </div>
+  </div>
+
+  <section id="confirm"><div class="wrap article">
+    <div class="section-head"><h2>Add a confirmation screen to a Contact Form 7 form</h2><p>Fewer typos in phone numbers and emails, fewer "sorry, I meant..." follow-ups. Standard practice in Japan, useful everywhere.</p></div>
+    <ol class="steps">
+      <li>Install and activate the plugin (Contact Form 7 must be active).</li>
+      <li>Edit the form in <b>Contact &gt; Contact Forms</b> and open its new <b>Confirm &amp; Masks</b> tab. Turn the confirmation screen on, choose <b>in place of the form</b> or <b>as a pop-up</b>, and edit the title and button labels if you want.</li>
+      <li>Save. From now on, <b>Send</b> shows a summary first; the visitor can go <b>Back</b> to fix something or confirm.</li>
+    </ol>
+    <p>To turn it on for every form at once, use <b>Contact &gt; Confirm &amp; Masks</b>. If you prefer the form's <i>Additional Settings</i> box, one line does it: <code>confirm_screen: on</code>.</p>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Pop-up variant</span></div><img class="zoomable" src="../assets/confirm-masks-cf7/screenshot-2.png" alt="The confirmation screen shown as a pop-up over the page" width="1280" height="800" loading="lazy"></div>
+      <figcaption>Labels come from your form's <code>&lt;label&gt;</code> elements. Files, checkboxes, radio buttons, selects and acceptance boxes are summarised properly. Fields hidden by conditional-fields plugins are left out.</figcaption>
+    </figure>
+    <p><b>Coming from "Contact Form 7 add confirm"?</b> Templates built for that old plugin keep working: the <code>[confirm]</code> button opens the confirmation screen and <code>[back]</code> is ignored.</p>
+  </div></section>
+
+  <section id="masks"><div class="wrap article">
+    <div class="section-head"><h2>Phone and document masks in Contact Form 7</h2><p>The field formats itself while the visitor types, the mobile keyboard switches to numeric, and incomplete values are rejected on the server too.</p></div>
+    <p>Add <code>mask:NAME</code> to any <code>[text]</code> or <code>[tel]</code> tag:</p>
+<pre><code>[tel* phone mask:phone-us]
+[text* document mask:cpf]
+[text birthday mask:date placeholder "DD/MM/YYYY"]
+[text* budget mask:money]
+[text plate mask:AAA-000]
+[tel* mobile mask placeholder "+57 (000) 000-0000"]</code></pre>
+    <p><b>Presets:</b> <code>phone</code>, <code>digits</code>, <code>money</code>, <code>phone-us</code>, <code>phone-br</code>, <code>phone-co</code>, <code>phone-mx</code>, <code>phone-ar</code>, <code>phone-cl</code>, <code>phone-es</code>, <code>phone-pt</code>, <code>phone-uk</code>, <code>phone-de</code>, <code>phone-fr</code>, <code>phone-it</code>, <code>phone-jp</code>, <code>date</code>, <code>date-us</code>, <code>date-iso</code>, <code>time</code>, <code>year</code>, <code>cpf</code>, <code>cnpj</code>, <code>cpf-cnpj</code>, <code>cep</code>, <code>nit</code>, <code>rut</code>, <code>dni</code>, <code>nie</code>, <code>curp</code>, <code>rfc</code>, <code>zip</code>, <code>zip-us</code>, <code>postcode</code>.</p>
+    <p><b>Your own pattern:</b> <code>0</code> digit, <code>9</code> optional digit, <code>A</code> letter, <code>S</code> letter or digit, <code>#</code> any character; anything else is printed literally. Contact Form 7 does not allow spaces or brackets inside tag options, so for those write a bare <code>mask</code> and put the pattern in the placeholder, or define a named mask under <b>Contact &gt; Confirm &amp; Masks</b>. Dates and times are also checked to be real (no 31/02).</p>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Masks while typing</span></div><img class="zoomable" src="../assets/confirm-masks-cf7/screenshot-3.png" alt="Phone, document, date and money fields formatting themselves while typing" width="1280" height="800" loading="lazy"></div>
+    </figure>
+    <p><b>Coming from "Contact Form 7 - Phone mask field"?</b> Its <code>[mask* name "(___) ___-____" "Placeholder"]</code> tag keeps working.</p>
+  </div></section>
+
+  <section id="steps"><div class="wrap article">
+    <div class="section-head"><h2>Multi-step forms</h2><p>One form, one submission, no extra pages.</p></div>
+    <p>Write <code>[step "Title"]</code> where a new step begins:</p>
+<pre><code>[step "About you"]
+&lt;label&gt; Your name [text* your-name] &lt;/label&gt;
+[step "Your message"]
+&lt;label&gt; Message [textarea your-message] &lt;/label&gt;
+[submit "Send"]</code></pre>
+    <p>A progress list shows the steps. <b>Next</b> validates the current step with Contact Form 7's own rules. If the server rejects a field, the form jumps back to its step. The confirmation screen, if enabled, comes after the last step.</p>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Multi-step form with progress list</span></div><img class="zoomable" src="../assets/confirm-masks-cf7/screenshot-4.png" alt="A multi-step Contact Form 7 form with its progress list" width="1280" height="800" loading="lazy"></div>
+    </figure>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <div class="section-head"><h2>Questions</h2></div>
+    <div class="faq">
+      <details open><summary>Does it work with the conditional fields plugin?</summary><p>Yes. Fields hidden by conditional-fields plugins are left out of the summary. Add the class <code>avoid-confirm</code> to anything else you do not want shown.</p></details>
+      <details><summary>Is it accessible?</summary><p>Focus moves to the summary, the pop-up traps focus and closes with Escape, and everything works with the keyboard and screen readers.</p></details>
+      <details><summary>Does it load scripts on every page?</summary><p>No. Assets load only on pages that render a form using one of the features. No jQuery, no external requests.</p></details>
+      <details><summary>For developers</summary><p>Events on the form element: <code>hvcm:confirmopen</code>, <code>hvcm:confirmback</code>, <code>hvcm:confirmsend</code>, <code>hvcm:stepchange</code>. <code>window.hvcm.init(form)</code> for forms inserted after page load. Filters: <code>hvcm_confirm_enabled</code>, <code>hvcm_frontend_config</code>, <code>hvcm_mask_presets</code>, <code>hvcm_incomplete_message</code>, <code>hvcm_always_enqueue</code>.</p></details>
+      <details><summary>Is anything locked behind a paid version?</summary><p>No. Everything on this page is in the free plugin. This plugin is not affiliated with the developers of Contact Form 7.</p></details>
+    </div>
+  </div></section>
+
+  <section id="support"><div class="wrap">
+    <div class="section-head"><h2>Support</h2><p>Write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a>. A reported bug becomes a new version, usually within a week.</p></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>HeroBytes Confirm &amp; Masks for Contact Form 7 &middot; &copy; 2026 HeroBytes</span>
+  <span><a href="../">HeroBytes</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
+</div></footer>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><p>Click the image or press Esc to close</p></dialog>
+<script>
+(function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
+d.addEventListener('click',function(){d.close();});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPF/CNPJ, CEP lookup and Colombian document fields for WooCommerce checkout - HeroBytes</title>
+<meta name="description" content="Add CPF/CNPJ, number, neighborhood and CEP lookup for Brazil, and document type, department and DIVIPOLA city lists for Colombia to the WooCommerce checkout. Classic and block checkout. Free.">
+<meta property="og:title" content="WooCommerce checkout fields for Brazil and Colombia">
+<meta property="og:description" content="CPF/CNPJ with validation, CEP lookup, Colombian document types and the official city list. Classic and block checkout, free.">
+<meta property="og:image" content="https://heroslaver-tech.github.io/herobytes/assets/checkout-fields-brazil-colombia/screenshot-1.png">
+<link rel="canonical" href="https://heroslaver-tech.github.io/herobytes/checkout-fields-brazil-colombia/">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="../"><img src="../assets/logo.svg" alt=""> HeroBytes</a>
+  <nav class="nav"><a href="#brazil">Brazil</a><a href="#colombia">Colombia</a><a href="#compat">Compatibility</a><a href="#faq">FAQ</a><a class="cta" href="#get">Get the plugin</a></nav>
+</div></header>
+
+<main>
+  <div class="wrap hero" id="get">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">WooCommerce plugin &middot; Free &middot; Classic and block checkout</span>
+        <h1>The checkout fields a store in Brazil or Colombia actually needs.</h1>
+        <p class="lead">WooCommerce ships with a generic address form. Selling in Brazil or Colombia needs the customer's tax ID, the street number as its own field, the neighborhood, and city lists that match what carriers and invoicing systems expect. HeroBytes Checkout Fields adds exactly those fields and nothing else, and only when the customer picks Brazil or Colombia.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wordpress.org/plugins/search/herobytes/" rel="noopener">Find it on WordPress.org</a>
+          <a class="btn secondary" href="#brazil">What it adds</a>
+        </div>
+        <p class="note">Finished and waiting for its turn in the WordPress.org review queue (the directory reviews one plugin per author at a time). Until it is listed, write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a> and you will get the zip.</p>
+      </div>
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i><span class="url">Classic checkout &middot; Brazil</span></div>
+        <img class="zoomable" src="../assets/checkout-fields-brazil-colombia/screenshot-1.png" alt="Brazilian billing form in the classic WooCommerce checkout: person type, CPF, CEP first, number and neighborhood" width="1280" height="860">
+      </div>
+    </div>
+  </div>
+
+  <section id="brazil"><div class="wrap article">
+    <div class="section-head"><h2>Brazil</h2></div>
+    <ul>
+      <li><b>Person type</b> (individual or legal entity), or a fixed type if you only sell to one of them.</li>
+      <li><b>CPF</b> and <b>CNPJ</b> with check-digit validation. The new <b>alphanumeric CNPJ</b> (issued from July 2026) is supported.</li>
+      <li><b>RG</b> and <b>State registration (IE)</b>, optional or required. Exempt companies can type <i>ISENTO</i>.</li>
+      <li><b>Number</b> and <b>Neighborhood (bairro)</b> as separate fields, in both the billing and the shipping address.</li>
+      <li><b>Mobile phone (celular)</b>, optional, required or hidden.</li>
+      <li><b>CEP first</b>: the postcode field comes before the street, and the street, neighborhood, city and state are filled in from the CEP, from the customer's browser (ViaCEP; can be turned off).</li>
+      <li><b>Company name</b> is required for legal entities. Input masks: 000.000.000-00, 00.000.000/0000-00, 00000-000, (00) 00000-0000.</li>
+      <li>Addresses are printed the Brazilian way: <i>Rua Exemplo, 123 / Bairro / Cidade-UF / CEP</i>.</li>
+    </ul>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Checkout block &middot; legal entity</span></div><img class="zoomable" src="../assets/checkout-fields-brazil-colombia/screenshot-2.png" alt="The same Brazilian fields in the WooCommerce Checkout block, for a legal entity" width="1280" height="860" loading="lazy"></div>
+      <figcaption>The Checkout block (WooCommerce Blocks) is supported through the official additional checkout fields API. Older plugins of this kind only support the classic checkout.</figcaption>
+    </figure>
+  </div></section>
+
+  <section id="colombia"><div class="wrap article">
+    <div class="section-head"><h2>Colombia</h2></div>
+    <ul>
+      <li><b>Document type</b> (CC, CE, NIT, TI, passport, PEP, PPT) and <b>document number</b>. NITs are checked against their verification digit and stored as <i>900123456-7</i>.</li>
+      <li><b>Department</b> before <b>city</b>, and the city chosen from the official <b>DIVIPOLA</b> list of the 1,122 municipalities of the selected department. The list ships with the plugin; nothing is downloaded. The DANE city code is stored with the order for carrier integrations.</li>
+      <li><b>Company name</b> is required when the document is a NIT. Postcode optional, as it is rarely used in Colombia.</li>
+    </ul>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Colombia &middot; document type, department and city</span></div><img class="zoomable" src="../assets/checkout-fields-brazil-colombia/screenshot-3.png" alt="Colombian form: document type, department and city list" width="1280" height="860" loading="lazy"></div>
+    </figure>
+  </div></section>
+
+  <section id="compat"><div class="wrap article">
+    <div class="section-head"><h2>Switching from "WooCommerce Extra Checkout Fields for Brazil"</h2><p>Same meta keys, so your payment, invoicing and shipping plugins keep working.</p></div>
+    <p>Payment gateways, invoicing (NF-e) and shipping plugins for Brazil read the order meta keys made popular by <i>WooCommerce Extra Checkout Fields for Brazil</i> (Brazilian Market on WooCommerce): <code>_billing_persontype</code>, <code>_billing_cpf</code>, <code>_billing_rg</code>, <code>_billing_cnpj</code>, <code>_billing_ie</code>, <code>_billing_cellphone</code>, <code>_billing_number</code>, <code>_billing_neighborhood</code>, <code>_shipping_number</code>, <code>_shipping_neighborhood</code>. This plugin stores its data under those same keys, on orders and on customer profiles, so you can switch without losing data or breaking integrations. Colombian fields use <code>_billing_document_type</code>, <code>_billing_document</code>, <code>_billing_divipola</code> and <code>_shipping_divipola</code>.</p>
+    <p>The fields also appear in My Account, in the admin order screen (editable), on the order received page and in every order e-mail. High-Performance Order Storage (HPOS) compatible.</p>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Admin order screen</span></div><img class="zoomable" src="../assets/checkout-fields-brazil-colombia/screenshot-4.png" alt="Admin order screen with the fields, editable" width="1280" height="860" loading="lazy"></div>
+    </figure>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <div class="section-head"><h2>Questions</h2></div>
+    <div class="faq">
+      <details open><summary>Do the fields appear for customers from other countries?</summary><p>No. They show up only when the selected country is Brazil or Colombia, and the Brazilian or Colombian fields are not required for the other country. A store that sells worldwide keeps its normal form for everyone else.</p></details>
+      <details><summary>Does it send data anywhere?</summary><p>No tracking, no accounts, no calls from your server. The only optional external service is ViaCEP, called from the customer's browser with the CEP alone to fill in the address; turn it off in the settings and the checkout works completely offline.</p></details>
+      <details><summary>Which WooCommerce version?</summary><p>WooCommerce 10.0 or later, WordPress 6.5 or later, PHP 7.4 or later. Tested with the classic shortcode checkout and the Checkout block.</p></details>
+      <details><summary>Can I add my own fields with the same rules?</summary><p>Yes: the <code>cfbc_fields</code> filter lets you change labels, requirements or priorities, or add fields that follow the same storage and display rules.</p></details>
+      <details><summary>Is anything locked behind a paid version?</summary><p>No. Every option works in the free version. A paid companion for stores selling across Latin America (Mexico, Argentina, Chile, Peru and invoicing extras) is in preparation.</p></details>
+    </div>
+  </div></section>
+
+  <section id="support"><div class="wrap">
+    <div class="section-head"><h2>Support</h2><p>Write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a>, in English, Spanish or Portuguese. A reported bug becomes a new version, usually within a week.</p></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>HeroBytes Checkout Fields for Brazil &amp; Colombia &middot; &copy; 2026 HeroBytes</span>
+  <span><a href="../">HeroBytes</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
+</div></footer>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><p>Click the image or press Esc to close</p></dialog>
+<script>
+(function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
+d.addEventListener('click',function(){d.close();});})();
+</script>
+</body>
+</html>

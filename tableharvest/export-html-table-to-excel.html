@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to export an HTML table to Excel (and keep the numbers as numbers) - TableHarvest</title>
+<meta name="description" content="Three ways to get a table from a web page into Excel or Google Sheets: copy and paste, Excel's Get Data from Web, and the TableHarvest extension. What breaks with decimal commas, merged cells and paginated tables, and how to avoid it.">
+<meta property="og:title" content="How to export an HTML table to Excel without numbers turning into text">
+<meta property="og:description" content="Copy-paste, Excel's From Web, or a one-click extension: what each one gets wrong and when to use it.">
+<meta property="og:image" content="https://heroslaver-tech.github.io/herobytes/assets/tableharvest/screenshot-1-preview.png">
+<link rel="canonical" href="https://heroslaver-tech.github.io/herobytes/tableharvest/export-html-table-to-excel.html">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="../"><img src="../assets/logo.svg" alt=""> HeroBytes</a>
+  <nav class="nav"><a href="#paste">Copy and paste</a><a href="#fromweb">Excel From Web</a><a href="#extension">Extension</a><a href="index.html">TableHarvest</a><a class="cta" href="https://chromewebstore.google.com/detail/lbppdbcjnfacljmmkjpcogchlpjnmboe" rel="noopener">Add to Chrome</a></nav>
+</div></header>
+
+<main>
+  <div class="wrap hero">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Guide &middot; Excel, Google Sheets, LibreOffice</span>
+        <h1>How to export an HTML table to Excel, with the numbers still being numbers.</h1>
+        <p class="lead">There are three ways to get a table from a web page into a spreadsheet. Each one works until it does not: decimal commas, merged cells, data grids built with JavaScript and tables split across pages are where they break. Here is what to expect from each, so you pick the right one in ten seconds.</p>
+      </div>
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i><span class="url">en.wikipedia.org &middot; TableHarvest preview</span></div>
+        <img class="zoomable" src="../assets/tableharvest/wikipedia-panel.png" data-full="../assets/tableharvest/screenshot-3-wikipedia.png" alt="TableHarvest previewing a Wikipedia table before exporting it" width="1124" height="760">
+      </div>
+    </div>
+  </div>
+
+  <section id="paste"><div class="wrap article">
+    <div class="section-head"><h2>1. Select, copy, paste</h2><p>The fastest way, and fine for a small, plain table.</p></div>
+    <ol class="steps">
+      <li>Drag the mouse from the first cell to the last one and press <b>Ctrl+C</b>.</li>
+      <li>In Excel or Google Sheets, click a cell and press <b>Ctrl+V</b>.</li>
+    </ol>
+    <p><b>Where it breaks.</b> The browser copies the table as HTML and as plain text, and the spreadsheet decides what to do with each cell:</p>
+    <ul>
+      <li><b>Numbers become text in Spanish, Portuguese, German or French Excel.</b> A page that shows <i>1,425.50</i> is read with the comma as decimal separator and the point as thousands separator, so the cell ends up as text, aligned to the left, and <code>SUM</code> ignores it. The reverse happens with <i>1.425,50</i> in English Excel. The fix by hand is <i>Data &gt; Text to Columns</i> or a <code>VALUE(SUBSTITUTE(...))</code> formula on every column.</li>
+      <li><b>Merged cells shift the columns.</b> A header spanning three columns pastes as one cell and everything below moves left.</li>
+      <li><b>Footnotes and symbols come along.</b> <i>[1]</i>, the typographic minus sign, non-breaking spaces and "+0.88%" all turn a number into text, and in Google Sheets a cell starting with <code>+</code> or <code>=</code> becomes a formula.</li>
+      <li><b>Data grids are not tables.</b> Many admin panels and dashboards draw rows with <code>&lt;div&gt;</code> elements. Selecting them copies a wall of text, one value per line.</li>
+    </ul>
+  </div></section>
+
+  <section id="fromweb"><div class="wrap article">
+    <div class="section-head"><h2>2. Excel: Data &gt; Get Data &gt; From Web</h2><p>Built into Excel for Windows. Good for public pages you want to refresh later.</p></div>
+    <ol class="steps">
+      <li>In Excel, <b>Data &gt; Get Data &gt; From Other Sources &gt; From Web</b> (on older versions, <b>Data &gt; From Web</b>), paste the page address and click OK.</li>
+      <li>The Navigator lists the tables Excel found. Pick one, check the preview and click <b>Load</b>.</li>
+      <li>Later, <b>Data &gt; Refresh All</b> downloads the table again.</li>
+    </ol>
+    <p><b>Where it breaks.</b></p>
+    <ul>
+      <li><b>Pages behind a login, or built with JavaScript, show no tables.</b> Excel downloads the raw page from its own connection: your bank, your CRM, your admin panel and most dashboards return either a login page or an empty shell.</li>
+      <li><b>Locale again.</b> Power Query guesses the number format from the page and from your Windows settings; a column with mixed formats is often typed as text and has to be fixed in the query editor.</li>
+      <li><b>Not on the Mac version of Excel (limited), not in Google Sheets.</b> Sheets has <code>=IMPORTHTML("url","table",1)</code>, with the same login and JavaScript limits.</li>
+    </ul>
+  </div></section>
+
+  <section id="extension"><div class="wrap article">
+    <div class="section-head"><h2>3. A browser extension: TableHarvest</h2><p>Reads the table as your browser shows it, after login, after the JavaScript ran, and writes each number with its real value.</p></div>
+    <ol class="steps">
+      <li><a href="https://chromewebstore.google.com/detail/lbppdbcjnfacljmmkjpcogchlpjnmboe" rel="noopener">Add TableHarvest to Chrome</a> (also works in Edge and other Chromium browsers).</li>
+      <li>On the page with the table, click the TableHarvest icon, or right-click the table and choose <b>Export this table</b>. Every table on the page gets an <b>Export</b> badge.</li>
+      <li>Check the preview: the exact rows and columns you will get, header rows detected (you can override them), optionally only the visible rows or with link URLs.</li>
+      <li>Click <b>Copy for Excel / Sheets</b> and paste with Ctrl+V, or <b>Download CSV</b> with the separator and encoding your Excel expects (comma or semicolon; UTF-8 with BOM, UTF-16 or Windows-1252).</li>
+    </ol>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Preview before export</span></div><img class="zoomable" src="../assets/tableharvest/preview-panel.png" data-full="../assets/tableharvest/screenshot-1-preview.png" alt="TableHarvest preview panel with export options" width="1124" height="500" loading="lazy"></div>
+      <figcaption>Each number is copied with its real value, so "1,425,423,212" lands as a number in English, Spanish or German Excel, aligned to the right, ready for <code>SUM</code>. Merged cells are laid out correctly, footnotes and odd symbols are cleaned, and cells that would become formulas are neutralised.</figcaption>
+    </figure>
+    <p><b>Where it breaks.</b> Virtualised grids (which only render the rows on screen) export the rows currently rendered. Tables split across pages (page 1, 2, 3...) need the Pro multi-page capture, which collects them into one export. Excel files (.xlsx) with frozen header and filters, all tables of a page at once and the Google Sheets export are also Pro features; copying and CSV are free and unlimited.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://chromewebstore.google.com/detail/lbppdbcjnfacljmmkjpcogchlpjnmboe" rel="noopener">Add TableHarvest to Chrome</a>
+      <a class="btn secondary" href="index.html#pro">See the Pro features</a>
+    </div>
+  </div></section>
+
+  <section id="summary"><div class="wrap article">
+    <div class="section-head"><h2>Which one should I use?</h2></div>
+    <table class="compare">
+      <thead><tr><th></th><th>Copy and paste</th><th>Excel From Web</th><th>TableHarvest</th></tr></thead>
+      <tbody>
+        <tr><td>Small public table, English locale</td><td>Fine</td><td>Fine</td><td>Fine</td></tr>
+        <tr><td>Spanish, Portuguese, German or French Excel</td><td>Numbers become text</td><td>Often needs fixing</td><td>Numbers stay numbers</td></tr>
+        <tr><td>Page behind a login or built with JavaScript</td><td>Works, if it is a real table</td><td>No table found</td><td>Works</td></tr>
+        <tr><td>Merged cells, footnotes, symbols</td><td>Columns shift, text cells</td><td>Depends</td><td>Handled</td></tr>
+        <tr><td>Data grids (div-based)</td><td>Wall of text</td><td>No table found</td><td>Works</td></tr>
+        <tr><td>Refresh automatically later</td><td>No</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Paginated tables into one file</td><td>No</td><td>No</td><td>Pro</td></tr>
+      </tbody>
+    </table>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>TableHarvest by HeroBytes &middot; &copy; 2026</span>
+  <span><a href="index.html">TableHarvest</a> &middot; <a href="privacy.html">Privacy policy</a> &middot; <a href="../">HeroBytes</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
+</div></footer>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><p>Click the image or press Esc to close</p></dialog>
+<script>
+(function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
+d.addEventListener('click',function(){d.close();});})();
+</script>
+</body>
+</html>

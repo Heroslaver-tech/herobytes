@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to hide the page title in WordPress (block themes and classic) - HeroBytes Hide Title &amp; Meta</title>
+<meta name="description" content="Hide the title, featured image, author, date or comments on one page or post in WordPress, including block themes (Full Site Editing). Free plugin, no CSS tricks, menus untouched.">
+<meta property="og:title" content="How to hide the page title in WordPress, on one page only">
+<meta property="og:description" content="A free plugin that removes the title block on block themes and hides it on classic themes, per page, without touching menus or SEO.">
+<meta property="og:image" content="https://heroslaver-tech.github.io/herobytes/assets/hide-title-meta/screenshot-1.png">
+<link rel="canonical" href="https://heroslaver-tech.github.io/herobytes/hide-title-meta/">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="../"><img src="../assets/logo.svg" alt=""> HeroBytes</a>
+  <nav class="nav"><a href="#how">How to</a><a href="#why">Why old plugins fail</a><a href="#faq">FAQ</a><a class="cta" href="https://wordpress.org/plugins/herobytes-hide-title-meta/" rel="noopener">Get it on WordPress.org</a></nav>
+</div></header>
+
+<main>
+  <div class="wrap hero">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">WordPress plugin &middot; Free &middot; Published on WordPress.org</span>
+        <h1>Hide the title on one page, not on all of them.</h1>
+        <p class="lead">HeroBytes Hide Title &amp; Meta adds one checkbox per element to the editor of every post and page: title, featured image, author, date, categories and comments. Tick, update, done. Works on block themes (Full Site Editing) and classic themes, and never touches your menus.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wordpress.org/plugins/herobytes-hide-title-meta/" rel="noopener">Install from WordPress.org</a>
+          <a class="btn secondary" href="#how">See the steps</a>
+        </div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>No CSS tricks on block themes</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Menus and SEO untouched</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>No tracking, no accounts</span>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i><span class="url">Block editor &middot; Hide Title &amp; Meta panel</span></div>
+        <img class="zoomable" src="../assets/hide-title-meta/screenshot-1.png" alt="The Hide Title &amp; Meta panel in the WordPress block editor sidebar, with one checkbox per element" width="1280" height="800">
+      </div>
+    </div>
+  </div>
+
+  <section id="how"><div class="wrap article">
+    <div class="section-head"><h2>How to hide the title of a WordPress page</h2><p>Three minutes, no code.</p></div>
+    <ol class="steps">
+      <li>In your WordPress admin go to <b>Plugins &gt; Add New</b>, search for <b>HeroBytes Hide Title &amp; Meta</b>, install and activate it.</li>
+      <li>Edit the page. In the block editor, open the <b>Hide Title &amp; Meta</b> panel in the right sidebar (in the classic editor it is a box in the right column).</li>
+      <li>Tick <b>Title</b>. Tick <b>Featured image</b> too if your theme prints it at the top of the page.</li>
+      <li>Click <b>Update</b> and open the page. The title is gone from the page header; it is still there in menus, in the browser tab and for search engines.</li>
+    </ol>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Twenty Twenty-Five (block theme) &middot; title and featured image hidden</span></div><img class="zoomable" src="../assets/hide-title-meta/screenshot-2.png" alt="A page on a block theme with its title and featured image hidden; the navigation menu still shows the page name" width="1280" height="800" loading="lazy"></div>
+      <figcaption>The page header no longer shows the title. The menu at the top still says "Landing Page", because menus are never affected.</figcaption>
+    </figure>
+    <h3>Hide the date, author or comments on a post</h3>
+    <p>Same panel, different boxes: <b>Author</b>, <b>Date</b>, <b>Categories &amp; tags</b> and <b>Comments</b>. On block themes the plugin removes the corresponding blocks (Post Author, Post Date, Post Terms, Comments) from that page only. On classic themes the template tags return nothing and a small CSS fallback hides the usual wrappers.</p>
+    <h3>Hide the title on every page by default</h3>
+    <p>Go to <b>Settings &gt; Hide Title &amp; Meta</b>, choose which post types get the panel and which elements are hidden by default on each. For example: hide the title on all pages, show it on all posts. Any individual page can still override the default.</p>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Settings &gt; Hide Title &amp; Meta</span></div><img class="zoomable" src="../assets/hide-title-meta/screenshot-3.png" alt="Settings page: post types, defaults per post type and the CSS fallback" width="1280" height="800" loading="lazy"></div>
+    </figure>
+  </div></section>
+
+  <section id="why"><div class="wrap article">
+    <div class="section-head"><h2>Why the old "hide title" plugins stopped working</h2></div>
+    <p>Most plugins of this kind were written ten years ago. They hide the title with a CSS rule aimed at the class names classic themes used (<code>.entry-title</code>, <code>.page-title</code>), or they blank the title with a filter on <code>the_title</code>.</p>
+    <ul>
+      <li><b>Block themes print the title differently.</b> Since WordPress 5.9 the title is a <i>Post Title</i> block inside a template. The old CSS does not match it, and an empty title leaves an empty box with its margins. Hide Title &amp; Meta removes the block itself from the page, so nothing is left behind.</li>
+      <li><b>Filtering <code>the_title</code> blanks the page name everywhere.</b> That is why those plugins also emptied the page name in navigation menus, page lists and "recent posts" widgets. This plugin tracks where the title is being printed and only hides it in the page's own header.</li>
+      <li><b>Some of them also broke the SEO title.</b> Hide Title &amp; Meta attaches its filters after the <code>&lt;head&gt;</code> is printed, so the <code>&lt;title&gt;</code> tag and the Open Graph tags keep the real title.</li>
+    </ul>
+    <h3>Can I do it without a plugin?</h3>
+    <p>Yes, with trade-offs. On a block theme you can edit the <i>Pages</i> template in the Site Editor and delete the Post Title block, but that hides the title on <b>every</b> page. A CSS rule such as <code>.page-id-12 .wp-block-post-title { display: none }</code> hides it on one page, but the empty block keeps its spacing, you have to find the page id, and the rule has to be repeated for each page. The plugin exists so that this is one checkbox.</p>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <div class="section-head"><h2>Questions</h2></div>
+    <div class="faq">
+      <details open><summary>The title is still visible on my classic theme.</summary><p>Your theme probably uses an unusual class name for the title. Go to <b>Settings &gt; Hide Title &amp; Meta &gt; Extra CSS selectors</b> and add the selector your theme uses (right-click the title, <i>Inspect</i>, copy its class). Developers can also hook the <code>htam_selectors</code> filter.</p></details>
+      <details><summary>Will the page disappear from my navigation menu?</summary><p>No. Menus, page lists, breadcrumbs and widgets keep the title. Only the title printed in the page's own header is hidden.</p></details>
+      <details><summary>Does it change the browser tab title or the SEO title?</summary><p>No. The <code>&lt;title&gt;</code> tag and the Open Graph / Twitter tags keep the real title.</p></details>
+      <details><summary>Does it work with Elementor, Divi or other page builders?</summary><p>Yes. With Elementor's theme builder widgets the title is hidden through the same mechanism as classic themes. If your builder prints the title with its own markup, add its selector in the settings.</p></details>
+      <details><summary>Is anything locked behind a paid version?</summary><p>No. Everything described here is in the free plugin and will stay there. No external requests, no tracking, no accounts. Uninstalling removes the option and the post meta.</p></details>
+    </div>
+  </div></section>
+
+  <section id="support"><div class="wrap">
+    <div class="section-head"><h2>Support</h2><p>Use the <a href="https://wordpress.org/support/plugin/herobytes-hide-title-meta/" rel="noopener">support forum on WordPress.org</a> or write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a>. A reported bug becomes a new version, usually within a week.</p></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>HeroBytes Hide Title &amp; Meta &middot; &copy; 2026 HeroBytes</span>
+  <span><a href="https://wordpress.org/plugins/herobytes-hide-title-meta/" rel="noopener">WordPress.org</a> &middot; <a href="../">HeroBytes</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
+</div></footer>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><p>Click the image or press Esc to close</p></dialog>
+<script>
+(function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
+d.addEventListener('click',function(){d.close();});})();
+</script>
+</body>
+</html>
