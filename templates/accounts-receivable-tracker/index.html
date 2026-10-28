@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accounts Receivable Tracker with Aging Report for Excel and Google Sheets - HeroBytes</title>
+<meta name="description" content="Track invoices, partial payments and clients in one spreadsheet and get an accounts receivable aging report (current, 1-30, 31-60, 61-90, 90+). Excel and Google Sheets, any currency. Free Lite version.">
+<meta property="og:title" content="Accounts Receivable Tracker with Aging Report">
+<meta property="og:description" content="Know who owes you, how much and for how long. Invoices, partial payments, aging buckets, credit limits.">
+<meta property="og:image" content="https://heroslaver-tech.github.io/herobytes/assets/templates/recv-dashboard.png">
+<link rel="canonical" href="https://heroslaver-tech.github.io/herobytes/templates/accounts-receivable-tracker/">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="../../"><img src="../../assets/logo.svg" alt=""> HeroBytes</a>
+  <nav class="nav"><a href="#how">How it works</a><a href="#compare">Free vs full</a><a href="#faq">FAQ</a><a class="cta" href="https://buy.polar.sh/polar_cl_Hv0Px3nQbiDf2RIvhRmQO9fqLN4WzulDL3A5q1zoxFQ" rel="noopener">Get it - $9.99</a></nav>
+</div></header>
+
+<main>
+  <div class="wrap hero">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Spreadsheet template &middot; Excel + Google Sheets</span>
+        <h1>Know who owes you, how much, and for how long.</h1>
+        <p class="lead">Invoices, payments and clients in one workbook, turned into an aging report: current, 1-30, 31-60, 61-90 and 90+ days overdue. Partial payments, payment terms and credit limits per client included.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://buy.polar.sh/polar_cl_Hv0Px3nQbiDf2RIvhRmQO9fqLN4WzulDL3A5q1zoxFQ" rel="noopener">Get the full tracker - $9.99</a>
+          <a class="btn secondary" href="../../downloads/accounts-receivable-tracker-lite.zip">Download the free Lite version</a>
+        </div>
+        <p class="note"><b>Launch offer: 30% off with code LAUNCH30</b> until November 10, 2026. One-time payment, instant download. Secure checkout by Polar.</p>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Any currency</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Client data stays on your computer</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Instructions in English and Spanish</span>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i><span class="url">Accounts Receivable Tracker &middot; Dashboard</span></div>
+        <img class="zoomable" src="../../assets/templates/recv-dashboard.png" alt="Dashboard: invoiced, collected, outstanding and overdue totals, aging buckets from current to 90+ days, and outstanding and overdue per client with an Over limit flag" width="2305" height="1022">
+      </div>
+    </div>
+  </div>
+
+  <section id="how"><div class="wrap article">
+    <div class="section-head"><h2>What an aging report tells you</h2><p>The one table that shows where your cash is stuck.</p></div>
+    <p>An accounts receivable aging report groups every unpaid invoice by how late it is. Money in "current" is fine. Money in "31-60" needs a reminder. Money in "90+" is the money you may never see. Small businesses and freelancers usually keep this in their head or in the invoicing tool; this template keeps it in one spreadsheet you control, and recalculates it for any date you choose.</p>
+    <ol class="steps">
+      <li><b>Settings:</b> your business name, currency code, default payment terms (for example 30 days) and the report date. Leave the report date empty to always see today.</li>
+      <li><b>Clients:</b> one row per client, with their payment terms and an optional credit limit.</li>
+      <li><b>Invoices:</b> one row per invoice: number, client, issue date and amount. The due date, paid amount, balance, status, days overdue and aging bucket are calculated.</li>
+      <li><b>Payments:</b> one row per payment with the invoice number. Partial payments are fine; a check warns you if the invoice number does not exist.</li>
+    </ol>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Invoices</span></div><img class="zoomable" src="../../assets/templates/recv-invoices.png" alt="Invoices sheet: invoice number, client, issue date, terms, due date, amount, paid, balance, status Paid, Open or Overdue, days overdue and aging bucket" width="2580" height="770" loading="lazy"></div>
+      <figcaption>Status, days overdue and the aging bucket update by themselves. The filter arrows list only overdue invoices when it is time to call.</figcaption>
+    </figure>
+    <h3>Can I do this with a blank spreadsheet?</h3>
+    <p>Yes: a payments total per invoice with SUMIF, a due date from the invoice or client terms, days overdue against the report date, and a COUNTIFS and SUMIFS per bucket. The hard parts are partial payments, terms that come from three places, and formulas that do not break in Excel with another language or decimal comma. The template has all of that done and tested in Excel and Google Sheets.</p>
+  </div></section>
+
+  <section id="compare"><div class="wrap article">
+    <div class="section-head"><h2>Free Lite version or full tracker</h2><p>Start with the Lite version. Upgrade when you want the aging report.</p></div>
+    <table class="compare">
+      <tr><th></th><th>Lite (free)</th><th>Full ($9.99)</th></tr>
+      <tr><td>Invoices with balance, status, days overdue</td><td>100 rows</td><td>500 rows</td></tr>
+      <tr><td>Totals: invoiced, collected, outstanding, overdue</td><td>Yes</td><td>Yes, plus % overdue and due in the next 30 days</td></tr>
+      <tr><td>Aging buckets (current to 90+)</td><td>-</td><td>Yes, for any report date</td></tr>
+      <tr><td>Payments sheet with partial payments</td><td>Paid amount typed on the invoice</td><td>1,000 payment rows matched to invoices</td></tr>
+      <tr><td>Clients with terms and credit limits</td><td>-</td><td>50 clients, Over limit flag</td></tr>
+      <tr><td>Per-client summary</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Google Sheets copy link</td><td>Open the .xlsx in Sheets</td><td>One click, ready to use</td></tr>
+    </table>
+    <div class="actions" style="margin-top:22px">
+      <a class="btn primary" href="https://buy.polar.sh/polar_cl_Hv0Px3nQbiDf2RIvhRmQO9fqLN4WzulDL3A5q1zoxFQ" rel="noopener">Get the full tracker - $9.99</a>
+      <a class="btn secondary" href="../../downloads/accounts-receivable-tracker-lite.zip">Download Lite (free)</a>
+    </div>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <div class="section-head"><h2>Questions</h2></div>
+    <div class="faq">
+      <details open><summary>Which Excel versions does it work in?</summary><p>Microsoft Excel 2010 or newer, on Windows and Mac, in any language and with a decimal point or a decimal comma.</p></details>
+      <details><summary>Does it work in Google Sheets?</summary><p>Yes. The download includes a PDF with a link that makes your own copy in Google Sheets in one click.</p></details>
+      <details><summary>Does it create or send invoices?</summary><p>No. It tracks the invoices you already issue with your invoicing tool or accountant, and tells you what is owed and how late.</p></details>
+      <details><summary>What do I receive?</summary><p>A ZIP with the .xlsx file and a PDF with instructions and the Google Sheets link, right after payment. Example clients, invoices and payments are included; delete them and start.</p></details>
+      <details><summary>Can I use it for several businesses?</summary><p>The licence covers one business. Please do not share or resell the file.</p></details>
+    </div>
+  </div></section>
+
+  <section id="support"><div class="wrap">
+    <div class="section-head"><h2>Support</h2><p>Questions or a problem with the file? Write to <a href="mailto:sebas152000@gmail.com">sebas152000@gmail.com</a> and you will get an answer within one business day. More templates: <a href="../">all HeroBytes templates</a>.</p></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Accounts Receivable Tracker &middot; &copy; 2026 HeroBytes</span>
+  <span><a href="../">Templates</a> &middot; <a href="../../">HeroBytes</a> &middot; <a href="mailto:sebas152000@gmail.com">Contact</a></span>
+</div></footer>
+
+<dialog class="lightbox" id="lightbox"><img alt=""><p>Click the image or press Esc to close</p></dialog>
+<script>
+(function(){var d=document.getElementById('lightbox');if(!d||!d.showModal)return;var im=d.querySelector('img');
+document.querySelectorAll('.zoomable').forEach(function(el){el.addEventListener('click',function(){im.src=el.getAttribute('data-full')||el.src;im.alt=el.alt;d.showModal();});});
+d.addEventListener('click',function(){d.close();});})();
+</script>
+</body>
+</html>
