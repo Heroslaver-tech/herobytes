@@ -26,7 +26,7 @@
       <div>
         <span class="eyebrow">Spreadsheet template &middot; Excel + Google Sheets</span>
         <h1>Know who owes you, how much, and for how long.</h1>
-        <p class="lead">Invoices, payments and clients in one workbook, turned into an aging report: current, 1-30, 31-60, 61-90 and 90+ days overdue. Partial payments, payment terms and credit limits per client included.</p>
+        <p class="lead">Invoices, payments and clients in one workbook, turned into an aging report: current, 1-30, 31-60, 61-90 and 90+ days overdue. It lists the five invoices to chase first, prints a statement for any client, and reminds you when a follow-up is due.</p>
         <div class="actions">
           <a class="btn primary" href="https://buy.polar.sh/polar_cl_Hv0Px3nQbiDf2RIvhRmQO9fqLN4WzulDL3A5q1zoxFQ" rel="noopener">Get the full tracker - $9.99</a>
           <a class="btn secondary" href="../../downloads/accounts-receivable-tracker-lite.zip">Download the free Lite version</a>
@@ -40,7 +40,7 @@
       </div>
       <div class="frame">
         <div class="bar"><i></i><i></i><i></i><span class="url">Accounts Receivable Tracker &middot; Dashboard</span></div>
-        <img class="zoomable" src="../../assets/templates/recv-dashboard.png" alt="Dashboard: invoiced, collected, outstanding and overdue totals, aging buckets from current to 90+ days, and outstanding and overdue per client with an Over limit flag" width="2305" height="1022">
+        <img class="zoomable" src="../../assets/templates/recv-dashboard.png" alt="Dashboard: invoiced, collected, outstanding and overdue totals, aging buckets from current to 90+ days, and outstanding and overdue per client with an Over limit flag" width="2306" height="1435">
       </div>
     </div>
   </div>
@@ -53,10 +53,15 @@
       <li><b>Clients:</b> one row per client, with their payment terms and an optional credit limit.</li>
       <li><b>Invoices:</b> one row per invoice: number, client, issue date and amount. The due date, paid amount, balance, status, days overdue and aging bucket are calculated.</li>
       <li><b>Payments:</b> one row per payment with the invoice number. Partial payments are fine; a check warns you if the invoice number does not exist.</li>
+      <li><b>Dashboard and Statement:</b> the Dashboard shows the totals, an aging chart and the five most overdue invoices to chase first. On Statement, pick a client to get their open invoices and balance due, ready to print or save as PDF and send.</li>
     </ol>
     <figure>
-      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Invoices</span></div><img class="zoomable" src="../../assets/templates/recv-invoices.png" alt="Invoices sheet: invoice number, client, issue date, terms, due date, amount, paid, balance, status Paid, Open or Overdue, days overdue and aging bucket" width="2580" height="770" loading="lazy"></div>
-      <figcaption>Status, days overdue and the aging bucket update by themselves. The filter arrows list only overdue invoices when it is time to call.</figcaption>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Invoices</span></div><img class="zoomable" src="../../assets/templates/recv-invoices.png" alt="Invoices sheet: invoice number, client, issue date, terms, due date, amount, paid, balance, status Paid, Open or Overdue, days overdue and aging bucket" width="2945" height="622" loading="lazy"></div>
+      <figcaption>Status, days overdue and the aging bucket update by themselves: overdue in red, paid in green. Type a "next follow-up" date and it turns amber on the day it is time to call.</figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Statement</span></div><img class="zoomable" src="../../assets/templates/recv-statement.png" alt="Statement sheet: pick a client and get their open invoices with due dates, balance, days overdue and status, ready to print or save as PDF" width="1709" height="598" loading="lazy"></div>
+      <figcaption>Pick a client on Statement and send them their open invoices and balance due, printed or as a PDF.</figcaption>
     </figure>
     <h3>Can I do this with a blank spreadsheet?</h3>
     <p>Yes: a payments total per invoice with SUMIF, a due date from the invoice or client terms, days overdue against the report date, and a COUNTIFS and SUMIFS per bucket. The hard parts are partial payments, terms that come from three places, and formulas that do not break in Excel with another language or decimal comma. The template has all of that done and tested in Excel and Google Sheets.</p>
@@ -72,6 +77,11 @@
       <tr><td>Payments sheet with partial payments</td><td>Paid amount typed on the invoice</td><td>1,000 payment rows matched to invoices</td></tr>
       <tr><td>Clients with terms and credit limits</td><td>-</td><td>50 clients, Over limit flag</td></tr>
       <tr><td>Per-client summary</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Chase-first list (5 most overdue invoices)</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Client statement, ready to print or send</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Follow-up dates with reminders</td><td>-</td><td>Last contact and next follow-up per invoice</td></tr>
+      <tr><td>Aging chart</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Overdue in red, paid in green</td><td>Yes</td><td>Yes</td></tr>
       <tr><td>Google Sheets copy link</td><td>Open the .xlsx in Sheets</td><td>One click, ready to use</td></tr>
     </table>
     <div class="actions" style="margin-top:22px">
@@ -86,7 +96,7 @@
       <details open><summary>Which Excel versions does it work in?</summary><p>Microsoft Excel 2010 or newer, on Windows and Mac, in any language and with a decimal point or a decimal comma.</p></details>
       <details><summary>Does it work in Google Sheets?</summary><p>Yes. The download includes a PDF with a link that makes your own copy in Google Sheets in one click.</p></details>
       <details><summary>Does it create or send invoices?</summary><p>No. It tracks the invoices you already issue with your invoicing tool or accountant, and tells you what is owed and how late.</p></details>
-      <details><summary>What do I receive?</summary><p>A ZIP with the .xlsx file and a PDF with instructions and the Google Sheets link, right after payment. Example clients, invoices and payments are included; delete them and start.</p></details>
+      <details><summary>What do I receive?</summary><p>A ZIP with two .xlsx files (one with example clients, invoices and payments, one blank) and a PDF with instructions and a Google Sheets copy link for each, right after payment.</p></details>
       <details><summary>Can I use it for several businesses?</summary><p>The licence covers one business. Please do not share or resell the file.</p></details>
     </div>
   </div></section>

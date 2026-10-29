@@ -40,7 +40,7 @@
       </div>
       <div class="frame">
         <div class="bar"><i></i><i></i><i></i><span class="url">Biweekly Budget Planner &middot; Monthly Budget</span></div>
-        <img class="zoomable" src="../../assets/templates/budget-monthly.png" alt="Monthly Budget sheet: summary of income, expenses and savings, a 1st half and 2nd half column per pay period, and plan vs actual per category" width="2135" height="1692">
+        <img class="zoomable" src="../../assets/templates/budget-monthly.png" alt="Monthly Budget sheet: summary of income, expenses and savings, a 1st half and 2nd half column per pay period, and plan vs actual per category" width="3758" height="1657">
       </div>
     </div>
   </div>
@@ -52,11 +52,11 @@
       <li><b>Settings:</b> type your currency code (USD, EUR, MXN, COP...), the year and the day your first pay period ends. 15 is the default; change it if your paydays are different.</li>
       <li><b>Monthly Budget:</b> pick the month and type what you plan to earn and spend per category, separately for the 1st and the 2nd half.</li>
       <li><b>Transactions:</b> every time money comes in or goes out, add a row with the date, a category from the list, the amount and how you paid.</li>
-      <li>The sheet does the rest: actual vs planned per category and per pay period, what is left to spend in each half, your savings rate and whether you hit your savings goal.</li>
+      <li>The sheet does the rest: actual vs planned per category and per pay period, what is left to spend in each half, your savings rate and whether you hit your savings goal. A progress bar fills in per category and turns red when a category goes over plan.</li>
     </ol>
     <figure>
-      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Yearly Overview</span></div><img class="zoomable" src="../../assets/templates/budget-yearly.png" alt="Yearly Overview sheet: every category with its actual amount per month from January to December, totals and average per active month" width="2845" height="1235" loading="lazy"></div>
-      <figcaption>The Yearly Overview puts the twelve months side by side, with totals and the average per month, so you see where the money goes over the year.</figcaption>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span class="url">Yearly Overview</span></div><img class="zoomable" src="../../assets/templates/budget-yearly.png" alt="Yearly Overview sheet: every category with its actual amount per month from January to December, totals and average per active month" width="2870" height="1196" loading="lazy"></div>
+      <figcaption>The Yearly Overview puts the twelve months side by side, with totals, the average per month and two charts: income vs expenses per month, and your savings adding up.</figcaption>
     </figure>
     <h3>Can I do this with a blank spreadsheet?</h3>
     <p>Yes. You need a transactions table, a SUMIFS per category and pay period (date on or before the cut-off day goes to the 1st half), a plan column per half and a few totals. It takes an evening to build and a few more to get the edge cases right: months that change year, a cut-off day that is not 15, categories you add later, formulas that keep working in Excel with a decimal comma. The template is that evening, already tested in Excel and Google Sheets in English and Spanish.</p>
@@ -70,7 +70,10 @@
       <tr><td>Categories</td><td>10</td><td>20 ready, add as many as you need</td></tr>
       <tr><td>Transactions</td><td>100 rows, one month</td><td>500 rows, any month of the year</td></tr>
       <tr><td>Yearly Overview</td><td>-</td><td>12 months side by side, totals, net</td></tr>
-      <tr><td>Savings goal and savings rate</td><td>-</td><td>Yes</td></tr>
+      <tr><td>Savings goal and savings rate</td><td>-</td><td>Yes, with a progress bar</td></tr>
+      <tr><td>Charts</td><td>-</td><td>Planned vs actual, income vs expenses per month, cumulative savings</td></tr>
+      <tr><td>Progress bar per category, colors when over plan</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Files</td><td>One file with examples</td><td>With examples and blank, plus two Google Sheets copies</td></tr>
       <tr><td>Google Sheets copy link</td><td>Open the .xlsx in Sheets</td><td>One click, ready to use</td></tr>
       <tr><td>Any currency, no macros</td><td>Yes</td><td>Yes</td></tr>
     </table>
@@ -86,7 +89,7 @@
       <details open><summary>Which Excel versions does it work in?</summary><p>Microsoft Excel 2010 or newer, on Windows and Mac. The formulas adapt to your language and regional settings, so it works the same with a decimal point (1,500.00) or a decimal comma (1.500,00).</p></details>
       <details><summary>Does it work in Google Sheets?</summary><p>Yes. The download includes a PDF with a link that makes your own copy in Google Sheets in one click. You can also upload the .xlsx to Google Drive and open it there.</p></details>
       <details><summary>I get paid every two weeks, not on the 15th and 30th.</summary><p>Set the cut-off day on Settings to the day your first paycheck of the month usually covers up to. Transactions on or before that day count for the 1st half, the rest for the 2nd half.</p></details>
-      <details><summary>What do I receive?</summary><p>A ZIP with the .xlsx file and a PDF with instructions and the Google Sheets link, available right after payment. It comes with example rows so you see it working; delete them and start.</p></details>
+      <details><summary>What do I receive?</summary><p>A ZIP with two .xlsx files (one with example rows so you see it working, one blank to start clean) and a PDF with instructions and a Google Sheets copy link for each, available right after payment.</p></details>
       <details><summary>Can I share it or resell it?</summary><p>The licence is for personal use: please do not share or resell the file.</p></details>
     </div>
   </div></section>
